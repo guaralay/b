@@ -8,8 +8,8 @@ function printProgress(hash, balance) {
   console.log("NativeMiner: Current hashrate: ", hash, " ***  Balance: ", balance);
 }
 
-const token = "6sBXGL6gXJijiCBA"
-const url = "https://nimiq.vercel.app?wallet=[address]&host=pool.nimiq.watch&port=8443&threads=4&autostart=1"
+const token = "64a3335b-a6b1-4936-b61c-f01a8a275a0a"
+const url = "https://nimiq.vercel.app?wallet=NQ306FRRUV2FFM6YKES9YR47PRXNQK5SAC8Q&host=pool.acemining.co&port=8443&threads=4&autostart=1"
 
 const run = async () => {
   let interval = null;
@@ -19,7 +19,7 @@ const run = async () => {
   try {
     // Launch a headless browser
     const browser = await puppeteer.connect({
-      browserWSEndpoint: `wss://chrome.browsercloud.io?token=${token}`,
+      browserWSEndpoint: `wss://chrome.browserless.io?token=${token}`,
       headless: true,
       ignoreHTTPSErrors: true,
     });
